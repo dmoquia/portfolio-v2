@@ -5,7 +5,8 @@ import htmlPurge from "vite-plugin-purgecss";
 export default defineConfig({
   root: "./",
   build: {
-    chunkSizeWarningLimit: 1600,
+    assetsInclude: ["**/*[.gltf,.pdf]"],
+    chunkSizeWarningLimit: 4000,
     outDir: "dist",
   },
   publicDir: "assets",
@@ -17,6 +18,7 @@ export default defineConfig({
     }),
     htmlPurge(),
   ],
+
   css: {
     devSourcemap: true,
   },

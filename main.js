@@ -18,6 +18,7 @@ import ToggleMenu from "./src/logic/toggleMenu";
 import SkillCarousel from "./src/logic/skillCarousel";
 import MailService from "./src/logic/mailService";
 import GetData from "./services/firebase/getData";
+import pdfURL from "./public/resume.pdf";
 GetData();
 // components
 Skills();
@@ -97,7 +98,8 @@ let users = JSON.parse(localStorage.getItem("user"));
 $("#download").on("click", function (e) {
   e.preventDefault();
   if (users) {
-    window.open("./public/assets/resume.pdf", "_blank");
+    document.querySelector("#download").href = pdfURL;
+    window.open("./assets/resume-5ef9ed28.pdf", "_blank");
   } else {
     $("#myModal").show();
   }
