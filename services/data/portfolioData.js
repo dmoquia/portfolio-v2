@@ -5,6 +5,7 @@ export const portData = [
     image:
       "https://res.cloudinary.com/dqbcudtfg/image/upload/v1673315906/portfolio/port_foodie_recipe_gzhe5i.jpg",
     techStack: "reactjs, react-router, CSS",
+
     description:
       "a search recipe app. built in reactjs and react router with themealdb external API integration.",
     demo: "https://namit-gid.netlify.app/",
@@ -38,7 +39,7 @@ export const portData = [
     image:
       "https://res.cloudinary.com/dqbcudtfg/image/upload/v1673315904/portfolio/port_tech_store_v2jeho.jpg",
     techStack:
-      "reactjs, react-router, bootstrap, paypal-express-checkout, styled components and contentful",
+      "reactjs, react-router, bootstrap, paypal-express-checkout, styled-components, contentful",
     description:
       "a fullstack ecommerce app where you filter products, add to cart. Built in reactjs using context api, usereducer hooks",
     demo: "https://old-tech-store.netlify.app/",
@@ -60,7 +61,7 @@ export const portData = [
     title: "chat mobile layout",
     image:
       "https://res.cloudinary.com/dqbcudtfg/image/upload/v1673315906/portfolio/port_chat_mobile_layout_jk4yvp.jpg",
-    techStack: "html5/css",
+    techStack: "html5, css",
     description:
       "a sample challenge project from frontendmentor.io . A static website with mobile layout fully built in css",
     demo: "https://dmoquia.github.io/chatapp-full-mobile-layout/",
@@ -82,7 +83,7 @@ export const portData = [
     title: "advice generator",
     image:
       "https://res.cloudinary.com/dqbcudtfg/image/upload/v1673315905/portfolio/port_advice_generator_dnnm67.jpg",
-    techStack: "html5/css/javascript",
+    techStack: "html5, css, javascript",
     description:
       "a sample challenge project from frontendmentor.io . a static website that will randomly generate quotes for the day. built in js/html and css",
     demo: "https://dmoquia.github.io/advice-generator/",
@@ -93,7 +94,7 @@ export const portData = [
     title: "country finder",
     image:
       "https://res.cloudinary.com/dqbcudtfg/image/upload/v1673315904/portfolio/port_rest_country_api_x9hrhe.jpg",
-    techStack: "reactjs, react-router and fetch API",
+    techStack: "reactjs, react-router, fetch API",
     description:
       "a sample challenge project from frontendmentor.io . a sigle page application where you can find details per country, with search or serch by region functionality",
     demo: "https://rc2-api.netlify.app",

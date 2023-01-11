@@ -13,13 +13,13 @@ import Skills from "./src/component/skills";
 import Modal from "./src/component/modal";
 import Contact from "./src/component/contact";
 import Footer from "./src/component/footer";
-import Project from "./src/component/project";
 import ToggleMenu from "./src/logic/toggleMenu";
 import SkillCarousel from "./src/logic/skillCarousel";
 import MailService from "./src/logic/mailService";
-import GetData from "./services/firebase/getData";
+// import GetData from "./services/firebase/getData";
 import pdfURL from "./public/resume.pdf";
-GetData();
+import Card from "./src/component/card";
+// GetData();
 // components
 Skills();
 Modal();
@@ -36,7 +36,8 @@ SkillCarousel();
 $("[data-aos]").parent().addClass("hideOverflowOnMobile");
 
 // #######  display personal project component #######
-Project();
+// Project();
+Card();
 AOS.init();
 
 // // #######  smtp form email service #######
@@ -97,10 +98,10 @@ window.addEventListener("DOMContentLoaded", () => {
 let users = JSON.parse(localStorage.getItem("user"));
 $("#download").on("click", function (e) {
   e.preventDefault();
-  if (users) {
-    document.querySelector("#download").href = pdfURL;
-    window.open("./assets/resume-5ef9ed28.pdf", "_blank");
-  } else {
+  if (!users) {
     $("#myModal").show();
+    return;
   }
+  document.querySelector("#download").href = pdfURL;
+  window.open("./assets/resume-5ef9ed28.pdf", "_blank");
 });

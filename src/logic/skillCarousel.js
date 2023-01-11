@@ -5,7 +5,7 @@ function SkillCarousel() {
       nav: false,
       autoplay: true,
       autoplayTimeout: 2000,
-      stagePadding: 50,
+      stagePadding: 0,
       dots: false,
       responsive: {
         0: {
@@ -17,6 +17,9 @@ function SkillCarousel() {
           stagePadding: 0,
         },
         1000: {
+          items: 5,
+        },
+        1400: {
           items: 6,
         },
       },
