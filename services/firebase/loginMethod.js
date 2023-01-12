@@ -43,6 +43,7 @@ const logout = (button) => {
       .then(() => {
         localStorage.clear();
         window.location.reload();
+        document.querySelector("#myModal").style.display = "auto";
         return;
       })
       .catch((error) => {
