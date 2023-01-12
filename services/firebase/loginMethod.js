@@ -41,9 +41,9 @@ const logout = (button) => {
     auth
       .signOut()
       .then(() => {
-        window.location.reload();
         localStorage.clear();
-        document.querySelector("#myModal").style.display = "auto";
+        window.location.reload();
+        return;
       })
       .catch((error) => {
         console.error(error);

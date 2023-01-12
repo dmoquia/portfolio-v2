@@ -42,12 +42,3 @@ ${techStack
 }
 
 export default Card;
-
-// const tags = `<ul className='tags'>
-// ${techStack
-//   .split(", ")
-//   .map(function (tag) {
-//     return "<li> <em>" + tag + "</em></li>";
-//   })
-//   .join(" ")}
-// </ul>`;
