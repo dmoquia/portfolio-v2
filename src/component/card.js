@@ -2,6 +2,7 @@ import { portData } from "../../services/data/portfolioData";
 
 function Card() {
   let placeholder = document.querySelector(".project-list");
+
   let fragment = new DocumentFragment();
 
   for (let item of portData) {
@@ -32,7 +33,7 @@ function Card() {
     const techStackEl = document.createElement("ul");
     techStackEl.classList.add("tags");
     const techStackHeader = document.createElement("h4");
-    // techStackHeader.textContent = " ";
+
     techStackHeader.innerHTML =
       'Tech Stack <i class="fa-sharp fa-solid fa-layer-group"></i>';
     for (let tag of techStack.split(", ")) {
