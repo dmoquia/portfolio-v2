@@ -2,43 +2,70 @@ import { portData } from "../../services/data/portfolioData";
 
 function Card() {
   let placeholder = document.querySelector(".project-list");
-  let out = "";
+  let fragment = new DocumentFragment();
 
   for (let item of portData) {
     const { techStack, image, title, description } = item;
 
-    const tags = `<ul className='tags'>
-${techStack
-  .split(", ")
-  .map(function (tag) {
-    return "<li> <em>" + tag + "</em></li>";
-  })
-  .join(" ")}
-</ul>`;
-    out += `
-    <div class="card">
-    <div class="image">
-      <img  src=${image}>
-    </div>
-    <div class="content">
-      <h3>${title}</h3>
-      <p>${description}</p>
+    // Create the card element
+    const card = document.createElement("div");
+    card.classList.add("card");
 
-      <h4>Tech Stack  <i class="fa-sharp fa-solid fa-layer-group"></i></h4>
+    // Create the image element
+    const imageEl = document.createElement("div");
+    imageEl.classList.add("image");
+    const img = document.createElement("img");
+    img.src = image;
+    imageEl.appendChild(img);
 
-       ${tags}
+    // Create the content element
+    const content = document.createElement("div");
+    content.classList.add("content");
+    const titleEl = document.createElement("h3");
+    titleEl.textContent = title;
+    const descriptionEl = document.createElement("p");
+    descriptionEl.textContent = description;
+    content.appendChild(titleEl);
+    content.appendChild(descriptionEl);
 
-      <br>
-      <div class="demorepo"> <a href=${item.demo} target="_blank">Demo: <i class="fa-solid fa-globe"></i
-      ></a> <a href=${item.repo} target="_blank">Repo: <i class="fa-brands fa-github"></i
-      ></a></div>
-    </div>
-  </div>
+    // Create the tech stack element
+    const techStackEl = document.createElement("ul");
+    techStackEl.classList.add("tags");
+    const techStackHeader = document.createElement("h4");
+    // techStackHeader.textContent = " ";
+    techStackHeader.innerHTML =
+      'Tech Stack <i class="fa-sharp fa-solid fa-layer-group"></i>';
+    for (let tag of techStack.split(", ")) {
+      const tagEl = document.createElement("li");
+      tagEl.innerHTML = `<em>${tag}</em>`;
+      techStackEl.appendChild(tagEl);
+    }
+    content.appendChild(techStackHeader);
+    content.appendChild(techStackEl);
 
-</div>
-    `;
+    // Create the demo/repo element
+    const demoRepo = document.createElement("div");
+    demoRepo.classList.add("demorepo");
+    const demoLink = document.createElement("a");
+    demoLink.href = item.demo;
+    demoLink.target = "_blank";
+    demoLink.textContent = "Demo: ";
+    demoLink.innerHTML += '<i class="fa-solid fa-globe"></i>';
+    const repoLink = document.createElement("a");
+    repoLink.href = item.repo;
+    repoLink.target = "_blank";
+    repoLink.textContent = "Repo: ";
+    repoLink.innerHTML += '<i class="fa-brands fa-github"></i>';
+    demoRepo.appendChild(demoLink);
+    demoRepo.appendChild(repoLink);
+    content.appendChild(demoRepo);
+
+    // Append the card elements
+    card.appendChild(imageEl);
+    card.appendChild(content);
+    fragment.appendChild(card);
   }
-  placeholder.innerHTML = out;
+  placeholder.appendChild(fragment);
 }
 
 export default Card;

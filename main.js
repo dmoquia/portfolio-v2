@@ -36,7 +36,7 @@ SkillCarousel();
 $("[data-aos]").parent().addClass("hideOverflowOnMobile");
 
 // #######  display personal project component #######
-// Project();
+
 Card();
 AOS.init();
 
