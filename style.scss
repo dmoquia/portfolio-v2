@@ -118,6 +118,8 @@ nav {
     // .active {
     //   transition: 1s ease;
     //   border-radius: 5px;
+    //   border: 1px solid $primary-color;
+    //   padding-bottom: 0;
     //   a {
     //     color: $primary-color;
 
@@ -200,7 +202,6 @@ nav {
       border-bottom: 2px solid $primary-color;
       width: 100%;
       max-width: 14rem;
-      // margin: 2em auto;
     }
     a {
       font-size: 1rem;
