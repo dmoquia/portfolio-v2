@@ -103,5 +103,5 @@ $("#download").on("click", function (e) {
     return;
   }
   document.querySelector("#download").href = pdfURL;
-  window.open("./assets/resume-5ef9ed28.pdf", "_blank");
+  window.open("./assets/resume-88e01036.pdf", "_blank");
 });
