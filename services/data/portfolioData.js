@@ -75,8 +75,8 @@ export const portData = [
     techStack: "reactjs, axios, react-router, stripe",
     description:
       "an ecommerce website where users can sign in and browser product, add to cart and checkout purchase. Built in react with stripe payment integration",
-    demo: "https://cheery-dragon-784f28.netlify.app/",
-    repo: "https://github.com/dmoquia/vintage-tect-store-prac",
+    demo: "https://vintage-fe-v3.vercel.app/",
+    repo: "https://github.com/dmoquia/vintage-fe-v3",
   },
   {
     id: "7",
